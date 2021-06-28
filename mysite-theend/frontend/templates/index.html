@@ -15,10 +15,13 @@
       <div align='center'>
         <h3> Welcome, <div id="user">%user%<div/>! </h3>
         <div class="logout"><a href="/logout">LOGOUT</a></div>
-        <h3> Your click power is <div id="clickPower">{{mainCycle.clickPower}}</div> </h3>
         <h3>You have <div id="data">%coins%</div> coins </h3>
+        <h3> Your click power is <div id="clickPower">%clickPower%</div> </h3>
+        <h3> Your auto click power is <div id="autoClickPower"> {{mainCycle.autoClickPower}} </div> coins per second </h3>
         <input type="image" class="catgirl" src="{% static 'images/tyan.jpg' %}" onclick="callClick()" />
-        <input type="image" class="catgirl boost" src="{% static 'images/workman.jpg' %}" onclick="buyBoost()" />
+        <div class="boost-wrapper" id="boost-wrapper">
+
+        </div>
       </div>
 
     </main>
